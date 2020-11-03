@@ -1,3 +1,9 @@
+/*
+Lab07 - Round Robin
+Alex Vargas A00824525
+Cesar Martinez A00517067
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -93,11 +99,12 @@ int main()
 	{
 		
 		Process *curr = dequeue();
-		int random = rand() % 100;
+		int random;
 
 		printf("Running process %d \n", curr->id);
 
 		for (int i = 0;i<Quantum;i++){
+			random = rand() % 100;
 			curr->remainingTime--;
 			if (curr->remainingTime == 0){
 				printf("Process %d finished execution \n", curr->id);
