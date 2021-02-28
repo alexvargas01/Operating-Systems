@@ -140,7 +140,6 @@ int main()
 				break;
 			}
 		}
-
 	
 		if (curr->remainingTime != 0){
 			if (random <= 10){
